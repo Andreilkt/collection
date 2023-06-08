@@ -18,7 +18,11 @@ def multiply(x, y):
 
 # Деление
 def divide(x, y):
-    return x / y
+    if y == 0:
+        print("На ноль делить нельзя!")
+        return None
+    else:
+        return x / y
 
 
 print("Выберите операцию.")
