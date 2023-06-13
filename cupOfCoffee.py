@@ -1,5 +1,6 @@
 class CupOfCoffee:
-    """Стакан кофе"""
+    """Стакан кофе
+    """
     DEFAULT_SIZE_ML: int = 250
 
     def __init__(self, size_ml: int = DEFAULT_SIZE_ML):
