@@ -47,7 +47,7 @@ cup_of_coffee = CupOfCoffee()
 # Обращение к методам класса CupOfCoffee
 cup_of_coffee.fill(50)
 
-q = cup_of_coffee.status()
-print(q)
+status = cup_of_coffee.status()
+print(status)
 
 cup_of_coffee.drink(100)
