@@ -17,6 +17,7 @@ for num in numbers:
         even_numbers.append(num)
     else:
         odd_numbers.append(num)
+
 # Выводы четного и нечетного списков
 print("Список четных:", even_numbers)
 print("Список нечетных:", odd_numbers)
