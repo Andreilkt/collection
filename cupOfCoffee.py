@@ -19,7 +19,7 @@ class CupOfCoffee:
     def status(self) -> str:
         """  :return: Объем кофе / объем стакана
         """
-        return f"{self._filled_ml/1000} / {self._size_ml/1000}"
+        return f"{self._filled_ml / 1000} / {self._size_ml / 1000}"
 
     def fill(self, ml: int) -> None:
         """Наполнить стакан
@@ -45,10 +45,9 @@ class CupOfCoffee:
 cup_of_coffee = CupOfCoffee()
 
 # Обращение к методам класса CupOfCoffee
-d = cup_of_coffee.fill(100)
-print(d)
+cup_of_coffee.fill(50)
 
 q = cup_of_coffee.status()
 print(q)
 
-cup_of_coffee.drink(190)
+cup_of_coffee.drink(100)
