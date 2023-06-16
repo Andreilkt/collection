@@ -1,9 +1,9 @@
 class User:
-    def __init__(self, name, number_passport, password):
+    def __init__(self, name, number_passport):
         self._name: str = name
         self._age: int = 1
         self._number_passport: int = number_passport
-        self.__password: str = password
+        self.__password: str = None
         self._balanse: int = 0
 
 

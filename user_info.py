@@ -1,21 +1,21 @@
 
-class User:
-    def __init__(self, username):
-        self.username = username
-        self.password = None
+class User_info:
+    def __init__(self, name):
+        self.name = name
+        self.__password = None
 
     def set_password(self, password):
-        if len(password) < 8:
-            raise ValueError("Password must be at least 8 characters long")
-        self.password = password
-        print("Password set successfully for user", self.username)
+        if len(password) < 10:
+            raise ValueError(" ВВедите не меньше 10 символов")
+        self.__password = password
+        print("Пароль установлен", self.username)
 
     def check_password(self, password):
-        if self.password is None:
-            raise ValueError("Password has not been set yet")
-        if password != self.password:
-            raise ValueError("Incorrect password")
-        print("Password is correct for user", self.username)
+        if self.__password is None:
+            raise ValueError("Пароль не установлен")
+        if password != self.__password:
+            raise ValueError("Пароль не прошел проверку")
+        print("Пароль прошел проверку", self.username)
 
 
 
