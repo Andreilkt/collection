@@ -50,4 +50,7 @@ cup_of_coffee.fill(50)
 status = cup_of_coffee.status()
 print(status)
 
-cup_of_coffee.drink(100)
+cup_of_coffee.drink(120)
+
+status = cup_of_coffee.status()
+print(status)

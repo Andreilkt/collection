@@ -1,38 +1,46 @@
-class User():
+class User:
     def __init__(self, name, number_passport, password):
         self._name: str = name
         self._age: int = 1
         self._number_passport: int = number_passport
-        self._password: str = " "
+        self.__password: str = password
         self._balanse: int = 0
 
 
-    def set_passwd(self, passwd: str) -> str:
-        if passwd == " ":
-            self._password = ""
+    @property
+    def set_passwd(self) -> str:
+        if self.__password == "password":
+            self.__password = "asdfghj"
+            return f"{self.__password = asdfghj}"
+
         else:
             raise ValueError("Пароль уже назначен")
 
-    def  check_passwd(self, passwd: str)-> str:
-        if passwd == " ":
+    def check_passwd(self) -> None:
+        if self.__password =="asdfghj":
             print("Пароль совпадает")
         else:
             raise ValueError("Пароль не прошел проверку")
 
 
+user_info = User("Sergey", "1", "asdfghj")
 
-user_info = User("Sergey","123456", " 1")
+#a = user_info.check_passwd()
+#print(a)
 
-user_info.company = "lkt"
 
-print(user_info.company)
 
-print(user_info._name)
+print(user_info.check_passwd)
 print(user_info._age)
 
 user_info._age = 45
 
-print(user_info._age, user_info._number_passport, user_info._password)
 
 
 
+
+class buyer():
+    pass
+
+class salesman():
+    pass
