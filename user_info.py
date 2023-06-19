@@ -3,11 +3,12 @@
 
 class User_info:
     # Конструктор класса
-    def __init__(self, name):
+    def __init__(self, name, balans):
         self.name: str = name
         self.age: int = 1
         self.hobbies = None
         self.__password = None
+        self.balans: int = balans
 
     # Установка Пароля
     def set_password(self, password):
@@ -27,7 +28,7 @@ class User_info:
     # Добавление хобби
     def check_hobbies(self, hobbies):
         if hobbies is None:
-            raise ValueError("Хобби нет")
+            print("Хобби нет")
         hobby = self.hobbies = hobbies
         print("У Вас хобби",hobby, self.name)
 
@@ -40,7 +41,7 @@ info = user.age = 45
 print(info)
 
 #Добавление хобби
-hobby = user.check_hobbies("Paragliding")
+hobby = user.check_hobbies("")
 print(hobby)
 
 #  Установка пароля
@@ -66,3 +67,9 @@ except ValueError as e:
     print(e)
 else:
     print("Пароль некорректный")
+
+class buyer(User_info):
+    pass
+
+class salesman(User_info):
+    pass
