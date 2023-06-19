@@ -18,7 +18,7 @@ class User:
 что поле `__password` является приватным, то есть доступ к нему возможен только изнутри класса.
 Код:
 """
-```python
+
 class User:
     def __init__(self, name, password):
         self.name = name
