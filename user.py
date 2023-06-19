@@ -27,13 +27,13 @@ user_info = User("Sergey", "1", "asdfghj")
 
 #a = user_info.check_passwd()
 #print(a)
-
+user_info._age = 45
 
 
 print(user_info.check_passwd)
 print(user_info._age)
 
-user_info._age = 45
+
 
 
 
