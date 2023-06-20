@@ -1,0 +1,20 @@
+options {
+  directory "/etc/bind";
+  forwarders {
+    172.18.1.10;
+  };
+  dnssec-validation no;
+  listen-on-v6 {
+    any;
+  };
+  allow-query {
+    any;
+  };
+  max-cache-ttl 1;
+  max-ncache-ttl 1;
+};
+
+zone "." {
+        type hint;
+        file "/usr/share/dns/root.hints";
+};

@@ -17,7 +17,7 @@ lines = read2list('read_2.txt')
 with open('wr1.txt', 'w', encoding='utf-8') as file_for_json:
     for listitem in lines:
         #if listitem.startswith(pr):
-            file_for_json.writelines(listitem.rstrip('\n') + '\n\n')
+            file_for_json.writelines(listitem.rstrip('\n') + '\\n \n')
 
 #lines_n = read2list('wr1.feature')
 
