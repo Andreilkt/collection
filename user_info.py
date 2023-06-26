@@ -3,12 +3,12 @@
 
 class User_info:
     # Конструктор класса
-    def __init__(self, name, balans):
+    def __init__(self, name):
         self.name: str = name
         self.age: int = 1
         self.hobbies = None
         self.__password = None
-        self.balans: int = balans
+        self.balance: int = 0
 
     # Установка Пароля
     def set_password(self, password):
@@ -41,7 +41,7 @@ info = user.age = 45
 print(info)
 
 #Добавление хобби
-hobby = user.check_hobbies("")
+hobby = user.check_hobbies("Paraplading")
 print(hobby)
 
 #  Установка пароля
@@ -68,8 +68,35 @@ except ValueError as e:
 else:
     print("Пароль некорректный")
 
-class buyer(User_info):
-    pass
+class Buyer(User_info):
+    def __init__(self, name):
+        super().__init__(name)
 
-class salesman(User_info):
-    pass
+
+class Salesman(User_info):
+    def __init__(self, name):
+        super().__init__(name)
+
+def transaction(user_info):
+    if isinstance(user_info, Buyer):
+        user_info.balance -= 100
+    elif isinstance(user_info, Salesman):
+        user_info.balance += 100
+
+buyer = Buyer("Anton")
+salesman = Salesman("Roman")
+
+transaction(buyer)
+transaction(salesman)
+
+print(buyer.balance)  # -100
+print(salesman.balance)  # 100
+
+
+
+
+
+
+
+
+
