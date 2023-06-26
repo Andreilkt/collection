@@ -1,4 +1,7 @@
-"""Класс для сохдания и проверки пароля пользователя"""
+"""Класс для сохдания и проверки пароля пользователя
+ Функция принимает принимает объект класса User_info
+
+"""
 
 
 class User_info:
@@ -30,17 +33,17 @@ class User_info:
         if hobbies is None:
             print("Хобби нет")
         hobby = self.hobbies = hobbies
-        print("У Вас хобби",hobby, self.name)
+        print("У Вас хобби", hobby, self.name)
 
 
 # Создаем объект класса Password
 user = User_info("Sergey")
 
-#Добавление возраста
+# Добавление возраста
 info = user.age = 45
-print(info)
+print(" Возраст Сергея ",info, "лет")
 
-#Добавление хобби
+# Добавление хобби
 hobby = user.check_hobbies("Paraplading")
 print(hobby)
 
@@ -68,35 +71,31 @@ except ValueError as e:
 else:
     print("Пароль некорректный")
 
+
+# Класс покупатель
 class Buyer(User_info):
     def __init__(self, name):
         super().__init__(name)
 
 
+# Класс продавец
 class Salesman(User_info):
     def __init__(self, name):
         super().__init__(name)
 
-def transaction(user_info):
+# Функция расчета
+def sale(user_info):
     if isinstance(user_info, Buyer):
         user_info.balance -= 100
     elif isinstance(user_info, Salesman):
         user_info.balance += 100
 
+
 buyer = Buyer("Anton")
 salesman = Salesman("Roman")
 
-transaction(buyer)
-transaction(salesman)
+sale(buyer)
+sale(salesman)
 
-print(buyer.balance)  # -100
-print(salesman.balance)  # 100
-
-
-
-
-
-
-
-
-
+print("Баланс покупателя", buyer.balance)
+print("Баланс продавца", salesman.balance)
