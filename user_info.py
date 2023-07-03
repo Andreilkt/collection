@@ -41,7 +41,7 @@ user = User_info("Sergey")
 
 # Добавление возраста
 info = user.age = 45
-print(" Возраст Сергея ",info, "лет")
+print(" Возраст Сергея ", info, "лет")
 
 # Добавление хобби
 hobby = user.check_hobbies("Paraplading")
@@ -82,6 +82,7 @@ class Buyer(User_info):
 class Salesman(User_info):
     def __init__(self, name):
         super().__init__(name)
+
 
 # Функция расчета
 def sale(user_info):
