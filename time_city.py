@@ -31,5 +31,7 @@ vladivostok = Vladivostok()
 
 # Вызов методов классов
 print("Москва:", moscow.local_time)
+
 print("Екатеринбург:", ekaterinburg.local_time)
+
 print("Владивосток:", vladivostok.local_time)
